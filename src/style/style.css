@@ -1,0 +1,162 @@
+/* CSS reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+    margin:0;
+    padding:0;
+}
+html,body {
+    margin:0;
+    padding:0;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+fieldset,img { 
+    border:0;
+}
+input{
+    border:1px solid #b0b0b0;
+    padding:3px 5px 4px;
+    color:#979797;
+    width:190px;
+}
+address,caption,cite,code,dfn,th,var {
+    font-style:normal;
+    font-weight:normal;
+}
+ol,ul {
+    list-style:none;
+}
+caption,th {
+    text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-size:100%;
+    font-weight:normal;
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym { border:0;
+}
+
+
+/* ---------------------------------------------------- */
+
+@font-face {
+    font-family: 'Poppins-standart';
+    src: url('/font/Poppins-Medium.ttf');
+}
+
+body{
+    font-family: 'Poppins-standart';
+    /* width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;; */
+}
+nav{
+    /* width: 50%; */
+    display: flex;
+    justify-content: flex-end;
+;
+}
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    
+
+    margin: 2%;
+}
+.nav-bar li{
+    margin: 2%;
+}
+.logForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#login-form, #signin-form{
+    display: flex;
+    justify-content: space-around;
+    width: 25em;
+    height: 15em;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 2px 2px 15px rgb(195, 195, 195);
+    border-radius: 6px;
+}
+a, li{
+    text-decoration-line : none;
+    color: black;
+}
+.chat-window{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height:500px;
+    box-shadow: 2px 2px 15px rgb(195, 195, 195);
+    border-radius: 6px;
+}
+/* .show-message{
+background-color: red;
+} */
+
+.commentSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-add-message{
+    display: flex;
+    flex-direction: row;
+    margin: 5%;
+}
+
+.section-add-message textarea{
+    
+    display: flex;
+    justify-content: center;
+    border: solid rgb(210, 210, 210);
+    outline: none;
+    resize: none;
+    border-radius: 6px;
+    padding: 1%;
+
+}
+.section-add-message button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    margin: 5%;
+}
+
+.section-add-message button:hover{
+    background-color: rgb(210, 210, 210);
+    border-radius: 6px;
+}
+
+.delete-button{
+    background-color: transparent;
+    border: none;
+}
+
+#sendButton{
+    font-family: 'Poppins-standart'; 
+    border:none;
+    background-color:blue;
+    border-radius:6px; 
+    color:white;
+    cursor:pointer;
+}
+#sendButton:hover{
+    background-color: rgb(34, 34, 146);
+    box-shadow:5px 5px 50px 15px rgb(195, 195, 195) ;
+    border: none;
+}

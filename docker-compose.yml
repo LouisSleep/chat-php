@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+    php:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - '2345:80'
+        volumes:
+            - ./src:/var/www/html
+
+    maria_db:
+        image: 'mariadb'
+        restart: on-failure
+        environment:
+            MYSQL_DATABASE: mariadbdata
+            MYSQL_ROOT_PASSWORD: password
+        volumes:
+            # Pour lancer un dump automatiquement au montage du conteneur
+            - ./database/dump.sql:/docker-entrypoint-initdb.d/dump.sql
+            # - database:/var/lib/mysql
+
+    phpmyadmin:
+        image: phpmyadmin
+        restart: on-failure
+        ports:
+            - '8080:80'
+        environment:
+            - PMA_ARBITRARY=1
+
+# volumes:
+#     database:
